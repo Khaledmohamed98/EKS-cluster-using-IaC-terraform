@@ -23,18 +23,18 @@ module "vpc" {
     enable_dns_hostnames = true
 
     tags = {
-        "kubernetes.io/cluster/eks-cluster" = "shared"
+        "kubernetes.io/cluster/my-eks-cluster" = "shared"
         environment = "development"
     }
 
     public_subnet_tags = {
-        "kubernetes.io/cluster/eks-cluster" = "shared"
+        "kubernetes.io/cluster/my-eks-cluster" = "shared"
         "kubernetes.io/role/elb" = 1 
         environment = "development"
     }
 
     private_subnet_tags = {
-        "kubernetes.io/cluster/eks-cluster" = "shared"
+        "kubernetes.io/cluster/my-eks-cluster" = "shared"
         "kubernetes.io/role/internal-elb" = 1 
         environment = "development"
     }
